@@ -1,0 +1,11 @@
+{
+  "project": "WisdomIntercessor.com",
+  "repository": "Wisdom-Intercessor/WisdomPact",
+  "branch": "project/wisdomintercessor.com",
+  "status": "initial-scaffold",
+  "primaryLanguage": "fa",
+  "secondaryLanguage": "en",
+  "experiences": ["outdoor", "indoor"],
+  "foundationalDocument": "Eternal Wisdom Charter / Wisdom Pact",
+  "productionDeployment": false
+}
