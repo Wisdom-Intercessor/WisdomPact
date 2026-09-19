@@ -1,132 +1,113 @@
-# ✨ WisdomPact
+# WisdomPact
 
 <p align="center">
   <img src="media/logo/WisdomPact_Logo.png" width="220" alt="WisdomPact Logo">
 </p>
 
 <h3 align="center">
-Eternal Wisdom Global Charter
+WisdomPact — Foundational Pact of WisdomIntercessor
 </h3>
 
 <p align="center">
-A Universal Framework for Wisdom, Humanity, Knowledge and Future Civilization
+A foundational, open and evolving framework for WisdomIntercessor
 </p>
 
-<p align="center">
-🌍 Philosophy • 📜 Charter • 🤖 Technology • 🌱 Civilization
-</p>
-
-
 ---
 
-# 🌟 About WisdomPact
+## About
 
-**WisdomPact (پیمان حکمت)** is a global open initiative based on the 
-**Eternal Wisdom Global Charter (منشور جهانی حکمت جاویدان)**.
+**WisdomIntercessor** is the master name of the project, website, and ecosystem.
 
-The mission of WisdomPact is to create a bridge between:
+**WisdomPact (پیمان حکمت)** is the foundational pact and documentation domain within the WisdomIntercessor architecture. It is not a replacement name for the master project.
 
-- Ancient wisdom and modern science
-- Human values and emerging technologies
-- Cultural diversity and universal principles
-- Present civilization and future generations
+The pact is intended to remain open to critique, revision, clarification, and documented improvement. No draft document in this repository should be treated as absolute or irreversible truth.
 
+The broader conceptual model distinguishes:
 
----
+- **عالم صغری** — the project's virtual/participatory world.
+- **عالم کبری** — the real world and wider existence.
+- **عالم متعالی** — the conceptual relationship between the two.
 
-# 📜 Eternal Wisdom Global Charter
+## Mission
 
-The foundation of WisdomPact is the **Eternal Wisdom Global Charter**:
+The project is organized around the principle of **آزادی حکمت برای همه** — freedom of wisdom for everyone.
 
-A universal philosophical and ethical framework designed to promote:
+The architecture seeks to connect individual, collective, social, environmental, international, technological, and longer-term human concerns through participation, knowledge, responsibility, and collective wisdom.
 
-- Human dignity
-- Justice and transparency
-- Knowledge and education
-- Environmental harmony
-- Peaceful cooperation
-- Responsible technology
+## Foundational documents
 
+The controlled document sequence currently begins with:
 
-Available versions:
+1. WI-MR-001 — Master Registry & Document Control
+2. WI-MA-001 — Master Architecture & System Structure
+3. WI-TA-001 — Technical Architecture
+4. WI-UX-001 — Outdoor / Indoor / WisdomSpace Experience Architecture
 
-| Language | Format |
-|---|---|
-| فارسی | PDF / DOCX |
-| English | PDF / DOCX |
+See the documentation directory for the current controlled documents.
 
+## Experience architecture
 
-➡️ [Read the Charter](charter/)
+The planned experience has three principal modes:
 
+- **Outdoor** — the public Genesis experience.
+- **Indoor** — the operational ecosystem/dashboard experience.
+- **WisdomSpace** — participant workspace and contribution environment.
 
----
+The website and ecosystem are developed progressively. Planned or conceptual capabilities must not be represented as operational services before implementation and verification.
 
-# 🧭 Vision
+## Ecosystem architecture
 
-To contribute toward a future civilization where:
+The current logical architecture consists of Layer 0 plus eight principal layers:
 
-> Wisdom guides knowledge,  
-> knowledge guides technology,  
-> and technology serves humanity.
+- Layer 0 — WisdomCore
+- Layer 1 — WisdomNetwork / WisdomHub
+- Layer 2 — WisdomChain
+- Layer 3 — WisdomTreasury / جام جم
+- Layer 4 — WisdomKnowledge / WisdomPlay
+- Layer 5 — WisdomGuard
+- Layer 6 — WisdomGovernance & Justice / تخت حکمت
+- Layer 7 — WisdomLife
+- Layer 8 — WisdomExistence & Time
 
+These are logical architectural boundaries. They do not by themselves imply separate applications, databases, tokens, or deployed services.
 
----
+## Participation model
 
-# 🔱 Core Principles
+The ecosystem is intended to support participants through a **Wisdom ID**, personal desk/workspace, showcase, authored works, contributions, and applicable services or products.
 
-## 1. Universal Wisdom
+The architecture distinguishes:
 
-Recognizing wisdom as a shared heritage of humanity.
+- **Concept** — an idea, principle, model, or future possibility.
+- **Service** — a capability delivered to participants.
+- **Product** — a defined deliverable with a user-facing lifecycle.
 
-## 2. Human Dignity
+Not every concept or contribution is a product.
 
-Protecting the fundamental value of every human being.
+## Technical and publication boundary
 
-## 3. Knowledge Freedom
+GitHub is used for controlled source and documentation.
 
-Supporting open access to learning and research.
+The public website is a separate publication surface. A GitHub commit does not by itself mean:
 
-## 4. Sustainable Civilization
+- website publication;
+- production deployment;
+- approval of a document;
+- token or wallet deployment;
+- financial activity;
+- governance activation.
 
-Creating harmony between humanity and Earth.
+## Repository structure
 
-## 5. Ethical Technology
+- charter/ — foundational pact/charter materials.
+- docs/ — controlled project documentation.
+- docs/registry/ — document control and master registry.
+- docs/architecture/ — architecture baselines.
+- media/ — repository media assets.
 
-Developing technology aligned with human values.
+## Status
 
+The current architecture documents are **Draft v0.1.0** unless their registry status explicitly states otherwise.
 
----
+Changes should follow WI-MR-001 — Master Registry & Document Control.
 
-# 🏛️ WisdomCore Ecosystem
-
-WisdomPact is designed as a foundation for multiple future platforms:
-
-
-## 🧠 WisdomAI
-
-Artificial intelligence systems designed for knowledge integration and wisdom-based decision support.
-
-
-## ⛓️ WisdomChain
-
-A decentralized infrastructure for transparency, cooperation and digital civilization.
-
-
-## 🌐 WisdomDAO
-
-A community governance model based on participation and collective intelligence.
-
-
-## 🏙️ WisdomLand
-
-A future digital and physical ecosystem connecting education, culture, technology and innovation.
-
-
-## 📚 WisdomLibrary
-
-An open global knowledge archive.
-
-
----
-
-# 🏗️ Repository Structure
+**WisdomIntercessor / WisdomPact**
