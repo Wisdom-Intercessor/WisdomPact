@@ -47,13 +47,22 @@ See the documentation directory for the current controlled documents.
 
 ## Experience architecture
 
-The planned experience has three principal modes:
+The final public experience is organized around the Eternal Wisdom Charter and three principal spaces:
 
-- **Outdoor** — the public Genesis experience.
-- **Indoor** — the operational ecosystem/dashboard experience.
-- **WisdomSpace** — participant workspace and contribution environment.
+1. **عالم کبری / Cosmic Realm** — the living world-facing interface: cosmic scale, Earth, time, place, zoom and focus, with a path toward live spatial/temporal data.
+2. **دیوان حکمت / Wisdom Divan** — the governance and coordination center containing eight Wisdom Halls.
+3. **WisdomCore** — the participant's personal operational center containing eight service/tool domains.
 
-The website and ecosystem are developed progressively. Planned or conceptual capabilities must not be represented as operational services before implementation and verification.
+**WisdomSpace** is the participant's personal and interactive presence within WisdomCore and can become a public or selectively shared showcase for identity, works, projects, skills, services, products and collaboration.
+
+The eight Divan Halls and eight WisdomCore service layers are related but are not the same architectural object.
+
+The opening public artifact is **رستاخیز حکمت جاویدان / Eternal Wisdom Charter / Wisdom Pact**.
+
+See:
+- `docs/architecture/WI-MA-002-Final-Experience-and-Site-Architecture.md`
+- `docs/architecture/WI-UX-002-Three-Space-Experience-Architecture.md`
+- `docs/registry/ADR-2026-09-25-Three-Space-Architecture.md`
 
 ## Ecosystem architecture
 
