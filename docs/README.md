@@ -4,12 +4,25 @@ Controlled documentation for WisdomIntercessor and its foundational WisdomPact r
 
 ## Current architecture baseline
 
-- WI-MR-001 — Master Registry & Document Control
-- WI-MA-001 — Master Architecture & System Structure
-- WI-TA-001 — Technical Architecture
-- WI-UX-001 — Outdoor / Indoor / WisdomSpace Experience Architecture
+The current final experience baseline is:
 
-Architecture documents are currently Draft v0.1.0 unless the master registry explicitly records another status.
+- **WI-MA-002** — Final Experience & Site Architecture
+- **WI-UX-002** — Three-Space Experience Architecture
+- **ADR-2026-09-25** — Three-Space Architecture Decision
+
+The underlying logical system remains **Layer 0 + 8**:
+
+- Layer 0 — WisdomCore
+- Layer 1 — WisdomNetwork
+- Layer 2 — WisdomChain
+- Layer 3 — WisdomTreasury
+- Layer 4 — WisdomKnowledge
+- Layer 5 — WisdomGuard
+- Layer 6 — Wisdom Governance & Justice
+- Layer 7 — WisdomLife & Health
+- Layer 8 — Wisdom of Existence & Time
+
+The public experience projects these domains into three primary spaces: **Cosmic Realm, Wisdom Divan, and WisdomCore**, with **WisdomSpace** as the participant-owned showcase/workspace within WisdomCore.
 
 ## Directories
 
