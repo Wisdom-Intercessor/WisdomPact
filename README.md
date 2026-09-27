@@ -92,6 +92,14 @@ The architecture distinguishes:
 
 Not every concept or contribution is a product.
 
+## Project handoff path
+
+The repository is the foundation point of a controlled path:
+
+**WisdomPact → Digital Infrastructure → Wisdom Ecosystem → wisdomintercessor.com**
+
+See `docs/REPOSITORY-ROADMAP.md` for responsibility, traceability, change-flow, and publication boundaries.
+
 ## Technical and publication boundary
 
 GitHub is used for controlled source and documentation.
