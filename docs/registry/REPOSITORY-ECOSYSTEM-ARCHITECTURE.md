@@ -1,240 +1,212 @@
-# Wisdom Intercessor — GitHub Repository Ecosystem
+# Wisdom Intercessor — GitHub Ecosystem Architecture
 
 ## 1. Purpose
 
-The GitHub ecosystem is governed from the **WisdomPact** repository.
+The GitHub ecosystem is governed from **WisdomPact**.
 
-WisdomPact is the supra-structural repository: it contains the Eternal Wisdom Charter, foundational principles, repository governance rules, architectural decisions, and the master registry that defines how the other repositories serve the Charter.
+The architecture deliberately separates **Repository, Project, Organization, Product, Service, Module, Protocol, and Concept**. Not every ecosystem entity becomes a GitHub repository.
 
-The other repositories are implementation, infrastructure, institutional, identity, intelligence, economic, governance, and operational domains. None of them supersedes the Charter.
+The purpose of this model is to preserve a small, stable strategic repository structure while allowing the ecosystem to grow without unnecessary repository fragmentation.
 
-## 2. Repository hierarchy
+## 2. Master structure
 
 ```
-                         WISDOM PACT
-              Eternal Wisdom Charter / Wisdom Pact
-                         (SUPRA)
-                              |
-       +----------------------+----------------------+
-       |                      |                      |
-       v                      v                      v
- WisdomIntercessor.com  EternalWisdomFoundation  WisdomCore
- Digital Infrastructure Institutional Stewardship Operational Core
-       |                      |                      |
-       +----------+-----------+----------+-----------+
-                  |                      |
-                  v                      v
-              WisdomID                WisdomAI
-              Identity              Intelligence
-                  |                      |
-                  +----------+-----------+
-                             |
-       +---------------------+---------------------+
-       |                     |                     |
-       v                     v                     v
-  WisdomChain          WisdomTreasury       Jam-e Jam-e Hikmat
-  Coordination/       Economic Resources    Collective Knowledge/
-  Verification                              Resources
-                                                   |
-                                                   v
-                                           Takht-e Hikmat
-                                           Wisdom Governance
+                    WISDOMPACT
+              Repository / Mother Document
+              Eternal Wisdom Charter
+                       |
+          +------------+-------------+
+          |                          |
+          v                          v
+Eternal Wisdom Foundation    WisdomIntercessor.com
+       Organization                  Project
+          |                          |
+          |                    +-----+-----+
+          |                    |           |
+          v                    v           v
+   Institutional          Products      Services
+   repositories           Modules       Components
+                          Protocols
 ```
 
-## 3. Controlled repository set
+**WisdomPact** is the supra-level repository and documentary root.
 
-| # | Repository | Persian title | Role | Relationship to WisdomPact |
-|---|---|---|---|---|
-| 0 | **WisdomPact** | منشور حکمت جاویدان | Supreme charter, principles, document control, master architecture and repository governance | Parent / normative source |
-| 1 | **WisdomIntercessor.com** | زیرساخت دیجیتال Wisdom Intercessor | Public digital infrastructure and user-facing website/ecosystem gateway | Public implementation domain |
-| 2 | **EternalWisdomFoundation** | بنیاد حکمت جاویدان | Institutional stewardship, research, preservation and long-term continuity | Institutional implementation domain |
-| 3 | **WisdomCore** | هسته حکمت | Personal/operational core, dashboards, services and orchestration | Core implementation domain |
-| 4 | **WisdomID** | شناسه حکمت | Identity, account, permissions, consent and interoperability | Identity infrastructure |
-| 5 | **WisdomAI** | هوش حکمت | AI, collective-intelligence and wisdom-support capabilities | Intelligence infrastructure |
-| 6 | **WisdomChain** | زنجیره حکمت | Verifiable coordination, records, protocols and value-transfer infrastructure | Technical/economic protocol domain |
-| 7 | **WisdomTreasury** | خزانه حکمت | Treasury, resource accounting, incentives and economic governance infrastructure | Economic-resource domain |
-| 8 | **Jame Jam-e Hikmat** | جام جم حکمت | Knowledge, resource, memory and collective-world-view domain inspired by Jām-e Jam | Collective knowledge/resource domain |
-| 9 | **Takht-e Hokmrani-e Hikmat** | تخت حکمرانی حکمت | Wisdom-centered governance, deliberation, justice, institutional rules and decision processes | Governance and justice domain |
+**Eternal Wisdom Foundation** is an organizational entity, not automatically a repository.
 
-### Repository 8 — Jame Jam-e Hikmat
+**WisdomIntercessor.com** is the principal digital project.
 
-**جام جم حکمت — Jame Jam-e Hikmat** is the repository for the collective and panoramic domain of Wisdom Intercessor.
+Other ecosystem names are classified through the Master Registry before any decision to create an independent repository.
 
-Its scope includes:
-- collective knowledge and wisdom records;
-- civilization and institutional memory;
-- shared resources and their transparent representation;
-- collective dashboards and world-state views;
-- knowledge/resource discovery and coordination interfaces;
-- connections to WisdomKnowledge, WisdomTreasury, WisdomChain and WisdomCore when those domains are implemented.
+## 3. Entity classification
 
-**Jame Jam-e Hikmat does not own the underlying treasury infrastructure.** WisdomTreasury remains responsible for treasury and economic infrastructure. Jame Jam-e Hikmat provides the collective knowledge/resource view and coordination layer.
+| Entity | Current type | Role |
+|---|---|---|
+| **WisdomPact** | Supra Repository / Mother Document | Eternal Wisdom Charter, principles, master registry, architecture and cross-ecosystem governance |
+| **WisdomIntercessor.com** | Project | Principal digital project and public ecosystem implementation |
+| **Eternal Wisdom Foundation** | Organization | Institutional stewardship, research, preservation and long-term continuity |
+| **WisdomChain** | Protocol / Project Candidate | Chain, verifiable records, coordination and related infrastructure |
+| **WisdomID** | Service / Infrastructure Candidate | Identity, authentication, authorization, consent and interoperability |
+| **WisdomCore** | Module / Product Candidate | Operational core, personal/work environment and orchestration |
+| **WisdomAI** | Service / Product Candidate | AI and collective-intelligence capabilities |
+| **WisdomTreasury** | Domain / Service Candidate | Treasury, resources and economic mechanisms |
+| **WisdomKnowledge** | Domain / Product Candidate | Knowledge, science, technology and knowledge memory |
+| **Jame Jam-e Hikmat** | Domain / Product Candidate | Collective knowledge, memory, resources and panoramic/world-state views |
+| **Takht-e Hokmrani-e Hikmat** | Governance Domain / Product Candidate | Governance, deliberation, justice, accountability and decision processes |
 
-### Repository 9 — Takht-e Hokmrani-e Hikmat
+These classifications are subject to the Master Registry and may evolve through documented architectural decisions.
 
-**تخت حکمرانی حکمت — Takht-e Hokmrani-e Hikmat** is the dedicated governance and justice repository.
+## 4. Repository policy
 
-Its scope includes:
-- wisdom-centered governance architecture;
-- deliberation and decision-making processes;
-- governance rules and institutional roles;
-- justice and dispute-resolution specifications;
-- decision records and provenance;
-- accountability and review mechanisms;
-- governance interfaces with WisdomPact, WisdomID, WisdomCore, WisdomChain, WisdomTreasury and Jame Jam-e Hikmat.
+A new independent repository should be created only when there is a documented need for independent:
 
-**Takht-e Hokmrani-e Hikmat does not replace WisdomPact.** The Charter remains the normative source. This repository implements approved governance requirements under the Charter.
+- development lifecycle;
+- ownership or stewardship;
+- security/data boundary;
+- deployment lifecycle;
+- issue/project management;
+- access-control boundary;
+- release/versioning boundary; or
+- community/contributor boundary.
 
-## 4. Authority model
+A concept, product, service, module or domain does **not** become a repository merely because it has a name or specification.
 
-**WisdomPact does not become a software dependency of every repository.** It is the normative and documentary root.
+This prevents repository inflation while preserving the ability to split a mature component into an independent repository when justified.
 
-The dependency direction is:
+## 5. WisdomPact — supra repository
 
-`Charter → Principles → Policies → Architecture → Repository Specifications → Implementations`
+**WisdomPact** owns the documentary and normative root of the ecosystem:
 
-No implementation repository may silently redefine a Charter principle.
-
-If an implementation requirement conflicts with the Charter, the conflict must be recorded as an architectural decision or Charter amendment proposal before it is treated as a baseline.
-
-## 5. Repository boundaries
-
-### WisdomPact
-Owns:
 - Eternal Wisdom Charter / Wisdom Pact;
 - Master Registry;
 - foundational policies;
-- architecture principles;
-- repository governance;
-- ADRs;
-- cross-repository standards;
-- canonical terminology.
+- master architecture;
+- repository and project governance rules;
+- architectural decisions (ADRs);
+- cross-ecosystem standards;
+- canonical terminology;
+- document-control rules.
 
-Does not own production application code, user identity databases, AI runtimes, financial assets, production wallets, or operational secrets.
+WisdomPact does not automatically own production application code, user identity databases, AI runtimes, financial assets, production wallets, or operational secrets.
 
-### WisdomIntercessor.com
-Owns:
-- public website;
-- public content delivery;
+## 6. WisdomIntercessor.com — principal project
+
+**WisdomIntercessor.com** is the principal digital project of the Wisdom Intercessor ecosystem.
+
+Its scope may include:
+
+- public website and digital gateway;
 - Genesis / Charter gateway;
-- Cosmic Realm / Wisdom Divan / WisdomCore entry surfaces;
+- Cosmic Realm;
+- Wisdom Divan;
+- public-facing WisdomCore entry;
 - public documentation presentation;
-- integration layer for public services.
+- integrations with ecosystem services and modules.
 
-### EternalWisdomFoundation
-Owns:
-- institutional stewardship;
+Its internal components do not automatically require separate repositories.
+
+## 7. Eternal Wisdom Foundation — organization
+
+**Eternal Wisdom Foundation** is an institutional organization responsible, where formally established, for:
+
+- stewardship;
 - research and preservation;
 - educational and cultural programs;
-- legally established grants/support programs;
-- continuity and archival functions.
+- institutional continuity;
+- archival functions;
+- support/grant programs where legally established.
 
-### WisdomCore
-Owns:
-- personal/workspace core;
-- operational orchestration;
-- service dashboard;
-- participant workspace integration;
-- cross-domain user experience.
+The Foundation may own or maintain repositories and projects, but the organization itself is not synonymous with a repository.
 
-### WisdomID
-Owns:
-- identity;
-- authentication/authorization interfaces;
-- consent;
-- profile and account interoperability;
-- identity lifecycle specifications.
+## 8. Strategic domains
 
-### WisdomAI
-Owns:
-- AI services;
-- reasoning/knowledge-support components;
-- collective wisdom tooling;
-- AI safety and evaluation specifications.
+The following domains are retained as important architectural entities but are **not automatically independent repositories**:
 
 ### WisdomChain
-Owns:
-- protocol-level coordination;
-- verifiable records;
-- chain integrations;
-- smart-contract/protocol specifications where approved.
+Protocol and coordination domain, including verifiable records and approved chain integrations.
+
+### WisdomID
+Identity and access domain, including authentication, authorization, consent and interoperability.
+
+### WisdomCore
+Operational core and participant workspace domain.
+
+### WisdomAI
+AI, reasoning support and collective-intelligence domain.
 
 ### WisdomTreasury
-Owns:
-- treasury architecture;
-- resource accounting;
-- economic policies;
-- incentives and allocation mechanisms;
-- financial controls and audit interfaces.
+Resource, treasury and economic-governance domain.
+
+### WisdomKnowledge
+Knowledge, science, technology and knowledge-memory domain.
 
 ### Jame Jam-e Hikmat
-Owns:
-- collective knowledge/resource views;
-- civilization and institutional memory interfaces;
-- panoramic/world-state representations;
-- collective discovery and coordination surfaces;
-- integration of knowledge, memory and resource information.
+Collective knowledge, memory, resource representation and panoramic/world-state domain.
 
 ### Takht-e Hokmrani-e Hikmat
-Owns:
-- governance architecture and operating rules;
-- deliberation and decision-making processes;
-- justice and dispute-resolution specifications;
-- governance records and decision provenance;
-- institutional role and authority models;
-- accountability and review mechanisms.
+Governance, deliberation, justice, accountability and decision-process domain.
 
-## 6. Cross-repository rule
+Each may later be promoted to an independent repository if the Repository Policy criteria are satisfied.
 
-Every repository must contain a `GOVERNANCE.md` or equivalent document identifying:
+## 9. Authority model
 
-1. purpose;
-2. scope;
-3. dependencies on WisdomPact;
-4. applicable Charter principles;
-5. owner/maintainer model;
-6. security and data boundaries;
-7. release policy;
-8. process for proposing changes that affect another repository.
+The dependency direction is:
 
-Jame Jam-e Hikmat and Takht-e Hokmrani-e Hikmat must explicitly define their interfaces with:
-- WisdomPact;
-- WisdomCore;
-- WisdomID;
-- WisdomAI;
-- WisdomChain;
-- WisdomTreasury;
-- WisdomIntercessor.com;
-- each other.
+`Charter → Principles → Policies → Architecture → Entity Specifications → Implementations`
 
-## 7. Change propagation
+WisdomPact is the normative and documentary source. It does not become a software dependency of every implementation.
+
+If an implementation requirement conflicts with the Charter or master architecture, the conflict must be documented through an ADR or Charter amendment proposal before becoming a baseline.
+
+## 10. Change propagation
 
 A change originating in WisdomPact follows:
 
-`WisdomPact → Registry/ADR → affected repository specification → implementation → validation → public deployment`
+`WisdomPact → Registry/ADR → affected project/entity specification → implementation → validation → deployment`
 
-A change originating in an implementation repository follows:
+A change originating in an implementation follows:
 
-`Implementation proposal → impact analysis → repository review → WisdomPact/ADR review when normative or cross-domain → implementation`
+`Implementation proposal → impact analysis → project/entity review → WisdomPact review when normative or cross-domain → implementation`
 
-Git commits are not equivalent to Charter approval, public deployment, governance activation, financial activation, or production release.
+A Git commit is not equivalent to Charter approval, public deployment, governance activation, financial activation, or production release.
 
-## 8. Naming
+## 11. Repository creation rule
 
-The official master project name is **Wisdom Intercessor**.
+The Master Registry must contain an approved classification and justification before a new strategic repository is created.
 
-The foundational document is **Eternal Wisdom Charter**, with the short name **Wisdom Pact**.
+Therefore:
 
-Official repository names:
-- **Jame Jam-e Hikmat** — جام جم حکمت
-- **Takht-e Hokmrani-e Hikmat** — تخت حکمرانی حکمت
+**No additional repository is currently required solely because an ecosystem concept or product has its own document.**
 
-These are independent repositories and must not be merged into a single repository.
+The existing 52 ecosystem documents will be classified through the Master Registry rather than converted automatically into repositories.
 
-## 9. Current state
+## 12. Current strategic GitHub model
 
-Only **WisdomPact** is currently confirmed as an existing repository in the connected GitHub account.
+The intended strategic model is:
 
-The remaining repositories are planned repository targets, including **Jame Jam-e Hikmat** and **Takht-e Hokmrani-e Hikmat**.
+1. **WisdomPact** — supra repository / mother document
+2. **WisdomIntercessor.com** — principal project
+3. **Eternal Wisdom Foundation** — organization
+4. **WisdomChain** — strategic protocol/project candidate
+5. **WisdomID** — strategic identity/service candidate
+6. **WisdomCore** — strategic operational-core candidate
+7. **WisdomAI** — strategic intelligence candidate
+8. **WisdomTreasury** — strategic economic-resource candidate
+9. **WisdomKnowledge** — strategic knowledge candidate
 
-No repository deletion or creation has been falsely represented as completed. Repository creation and initialization should proceed one repository at a time after registry approval.
+Items 4–9 are architectural entities and strategic candidates; they are not declared existing GitHub repositories until independently approved and created.
+
+## 13. Current GitHub reality
+
+At the time of this document revision, the connected GitHub account confirms **WisdomPact** as an existing repository.
+
+No claim is made that the other entities have already been created as repositories.
+
+Repository creation, organizational setup and project configuration will be performed separately and explicitly.
+
+## 14. Governing principle
+
+> **Everything in the Wisdom Intercessor ecosystem does not need to become a repository.**
+
+GitHub repositories are implementation and collaboration boundaries. The ecosystem architecture is broader than its repository structure.
+
+The **Master Registry** is the authoritative place for deciding what each entity is, where it belongs, and whether it requires an independent repository.
