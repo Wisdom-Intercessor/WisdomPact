@@ -64,6 +64,30 @@ See:
 - `docs/architecture/WI-UX-002-Three-Space-Experience-Architecture.md`
 - `docs/registry/ADR-2026-09-25-Three-Space-Architecture.md`
 
+## GitHub repository ecosystem
+
+The GitHub organization is governed through a **supra-repository model**.
+
+**WisdomPact** is the normative root: Charter, principles, master registry, cross-repository policies, architecture decisions, and controlled terminology.
+
+The planned eight strategic/application repositories beneath that root are:
+
+1. **WisdomIntercessor.com** — public digital infrastructure and website
+2. **EternalWisdomFoundation** — institutional stewardship, research, preservation and continuity
+3. **WisdomCore** — operational and participant core
+4. **WisdomID** — identity, authentication, consent and interoperability
+5. **WisdomAI** — AI and collective-intelligence infrastructure
+6. **WisdomChain** — protocol, coordination and verifiable-record infrastructure
+7. **WisdomTreasury** — treasury, resources and economic governance
+8. **[Reserved strategic repository]** — reserved for the next cross-domain capability approved through the Master Registry
+
+The exact eighth repository name is deliberately reserved rather than invented until its scope is separated from the existing domains.
+
+The complete relationship and boundaries are defined in:
+- `docs/registry/REPOSITORY-ECOSYSTEM-ARCHITECTURE.md`
+
+The logical Layer 0 + 8 architecture remains a separate architectural model. A logical layer does **not** automatically become a GitHub repository.
+
 ## Ecosystem architecture
 
 The current logical architecture consists of Layer 0 plus eight principal layers:
@@ -96,7 +120,7 @@ Not every concept or contribution is a product.
 
 The repository is the foundation point of a controlled path:
 
-**WisdomPact → Digital Infrastructure → Wisdom Ecosystem → wisdomintercessor.com**
+**WisdomPact → Repository Specifications → Strategic Repositories → WisdomIntercessor.com → Public Wisdom Ecosystem**em → wisdomintercessor.com**
 
 See `docs/REPOSITORY-ROADMAP.md` for responsibility, traceability, change-flow, and publication boundaries.
 
