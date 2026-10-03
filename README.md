@@ -14,6 +14,17 @@ A foundational, open and evolving framework for WisdomIntercessor
 
 ---
 
+## Live project bridge
+
+**Public website:** https://wisdomintercessor.com  
+**GitHub organization:** https://github.com/Wisdom-Intercessor  
+**Master repository:** https://github.com/Wisdom-Intercessor/WisdomPact  
+**Website ↔ GitHub bridge:** https://wisdomintercessor.com/github-wisdom-bridge/
+
+The website is the public publication and participant-facing surface. GitHub is the controlled source, documentation, architecture and development surface. The bridge page on the website provides a public entry point to the controlled GitHub sources; this README provides the reciprocal path back to the live website.
+
+This relationship is intentionally a **controlled bridge**, not an assumption that every GitHub commit is automatically published to production. Publication remains a separate action and approval boundary.
+
 ## About
 
 **WisdomIntercessor** is the master name of the project, website, and ecosystem.
@@ -120,7 +131,7 @@ Not every concept or contribution is a product.
 
 The repository is the foundation point of a controlled path:
 
-**WisdomPact → Repository Specifications → Strategic Repositories → WisdomIntercessor.com → Public Wisdom Ecosystem**em → wisdomintercessor.com**
+**WisdomPact → Repository Specifications → Strategic Repositories → WisdomIntercessor.com → Public Wisdom Ecosystem**
 
 See `docs/REPOSITORY-ROADMAP.md` for responsibility, traceability, change-flow, and publication boundaries.
 
