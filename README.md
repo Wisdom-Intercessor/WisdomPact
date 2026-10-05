@@ -33,133 +33,75 @@ This relationship is intentionally a **controlled bridge**, not an assumption th
 
 The pact is intended to remain open to critique, revision, clarification, and documented improvement. No draft document in this repository should be treated as absolute or irreversible truth.
 
-The broader conceptual model distinguishes:
+## Foundational documents and control hierarchy
 
-- **عالم صغری** — the project's virtual/participatory world.
-- **عالم کبری** — the real world and wider existence.
-- **عالم متعالی** — the conceptual relationship between the two.
+The controlled source hierarchy is:
+
+**Wisdom Pact / Eternal Wisdom Charter**  
+→ **WI-MW-001 — Master Whitepaper**  
+→ **WI-MR-001 — Master Registry Specification**  
+→ **WI-MR-002 — Master Registry**  
+→ **WI-MA-001 — Master Architecture Specification**  
+→ **Domain / Technical Specifications**  
+→ **Implementation / Operational Documents**
+
+The distinction is mandatory:
+
+- WI-MR-001 defines how the Registry is governed and structured.
+- WI-MR-002 is the controlled Registry instance containing registered entities.
+- WI-MA-001 defines architecture, placement and relationships from that controlled baseline.
+
+See also:
+- `docs/review/WI-DR-001-Document-Architecture-Technical-Legal-Review-v1.0.md`
+- `docs/architecture/Site-Master-Structure-and-Page-Template-Specification.md`
 
 ## Mission
 
 The project is organized around the principle of **آزادی حکمت برای همه** — freedom of wisdom for everyone.
 
-The architecture seeks to connect individual, collective, social, environmental, international, technological, and longer-term human concerns through participation, knowledge, responsibility, and collective wisdom.
-
-## Foundational documents
-
-The controlled document sequence currently begins with:
-
-1. WI-MR-001 — Master Registry & Document Control
-2. WI-MA-001 — Master Architecture & System Structure
-3. WI-TA-001 — Technical Architecture
-4. WI-UX-001 — Outdoor / Indoor / WisdomSpace Experience Architecture
-
-See the documentation directory for the current controlled documents.
-
 ## Experience architecture
 
-The final public experience is organized around the Eternal Wisdom Charter and three principal spaces:
+The current public experience is organized around three principal spaces:
 
 1. **عالم کبری / Cosmic Realm** — the living world-facing interface: cosmic scale, Earth, time, place, zoom and focus, with a path toward live spatial/temporal data.
 2. **دیوان حکمت / Wisdom Divan** — the governance and coordination center containing eight Wisdom Halls.
-3. **WisdomCore** — the participant's personal operational center containing eight service/tool domains.
+3. **WisdomCore** — the participant operational center and interface to the ecosystem.
 
-**WisdomSpace** is the participant's personal and interactive presence within WisdomCore and can become a public or selectively shared showcase for identity, works, projects, skills, services, products and collaboration.
+**WisdomSpace** is the participant's personal and interactive presence within WisdomCore and can become a public or selectively shared showcase.
 
-The eight Divan Halls and eight WisdomCore service layers are related but are not the same architectural object.
-
-The opening public artifact is **رستاخیز حکمت جاویدان / Eternal Wisdom Charter / Wisdom Pact**.
+These experience spaces must not be confused with the three conceptual realms or with the Layer 0 + 8 logical architecture. The Site Master Structure specification defines the mapping.
 
 See:
 - `docs/architecture/WI-MA-002-Final-Experience-and-Site-Architecture.md`
 - `docs/architecture/WI-UX-002-Three-Space-Experience-Architecture.md`
-- `docs/registry/ADR-2026-09-25-Three-Space-Architecture.md`
-
-## GitHub repository ecosystem
-
-The GitHub organization is governed through a **supra-repository model**.
-
-**WisdomPact** is the normative root: Charter, principles, master registry, cross-repository policies, architecture decisions, and controlled terminology.
-
-The planned eight strategic/application repositories beneath that root are:
-
-1. **WisdomIntercessor.com** — public digital infrastructure and website
-2. **EternalWisdomFoundation** — institutional stewardship, research, preservation and continuity
-3. **WisdomCore** — operational and participant core
-4. **WisdomID** — identity, authentication, consent and interoperability
-5. **WisdomAI** — AI and collective-intelligence infrastructure
-6. **WisdomChain** — protocol, coordination and verifiable-record infrastructure
-7. **WisdomTreasury** — treasury, resources and economic governance
-8. **[Reserved strategic repository]** — reserved for the next cross-domain capability approved through the Master Registry
-
-The exact eighth repository name is deliberately reserved rather than invented until its scope is separated from the existing domains.
-
-The complete relationship and boundaries are defined in:
-- `docs/registry/REPOSITORY-ECOSYSTEM-ARCHITECTURE.md`
-
-The logical Layer 0 + 8 architecture remains a separate architectural model. A logical layer does **not** automatically become a GitHub repository.
+- `docs/architecture/Site-Master-Structure-and-Page-Template-Specification.md`
 
 ## Ecosystem architecture
 
-The current logical architecture consists of Layer 0 plus eight principal layers:
+The logical architecture remains Layer 0 plus eight principal layers:
 
 - Layer 0 — WisdomCore
-- Layer 1 — WisdomNetwork / WisdomHub
+- Layer 1 — WisdomNetwork
 - Layer 2 — WisdomChain
-- Layer 3 — WisdomTreasury / جام جم
-- Layer 4 — WisdomKnowledge / WisdomPlay
+- Layer 3 — WisdomTreasury
+- Layer 4 — WisdomKnowledge
 - Layer 5 — WisdomGuard
-- Layer 6 — WisdomGovernance & Justice / تخت حکمت
-- Layer 7 — WisdomLife
-- Layer 8 — WisdomExistence & Time
+- Layer 6 — Wisdom Governance & Justice
+- Layer 7 — WisdomLife & Health
+- Layer 8 — Wisdom of Existence & Time
 
-These are logical architectural boundaries. They do not by themselves imply separate applications, databases, tokens, or deployed services.
+These are logical architectural boundaries. They do not automatically imply separate applications, databases, tokens or deployed services.
 
-## Participation model
+## Review baseline
 
-The ecosystem is intended to support participants through a **Wisdom ID**, personal desk/workspace, showcase, authored works, contributions, and applicable services or products.
+A formal review of the existing architecture was added on 2026-10-05. Its purpose is reconciliation of technical, legal, scientific/epistemic and document-control gaps, not expansion of the architecture.
 
-The architecture distinguishes:
-
-- **Concept** — an idea, principle, model, or future possibility.
-- **Service** — a capability delivered to participants.
-- **Product** — a defined deliverable with a user-facing lifecycle.
-
-Not every concept or contribution is a product.
-
-## Project handoff path
-
-The repository is the foundation point of a controlled path:
-
-**WisdomPact → Repository Specifications → Strategic Repositories → WisdomIntercessor.com → Public Wisdom Ecosystem**
-
-See `docs/REPOSITORY-ROADMAP.md` for responsibility, traceability, change-flow, and publication boundaries.
+The highest-priority corrections are: canonical document hierarchy, terminology normalization, status semantics, mapping of realms/spaces/layers, normative status of Charter/Pact/Manifesto, privacy/controller model, participation terms, licensing, moderation/appeal, accessibility, security evidence and jurisdictional/legal boundaries.
 
 ## Technical and publication boundary
 
 GitHub is used for controlled source and documentation.
 
-The public website is a separate publication surface. A GitHub commit does not by itself mean:
-
-- website publication;
-- production deployment;
-- approval of a document;
-- token or wallet deployment;
-- financial activity;
-- governance activation.
-
-## Repository structure
-
-- charter/ — foundational pact/charter materials.
-- docs/ — controlled project documentation.
-- docs/registry/ — document control and master registry.
-- docs/architecture/ — architecture baselines.
-- media/ — repository media assets.
-
-## Status
-
-The current architecture documents are **Draft v0.1.0** unless their registry status explicitly states otherwise.
-
-Changes should follow WI-MR-001 — Master Registry & Document Control.
+The public website is a separate publication surface. A GitHub commit does not by itself mean website publication, production deployment, approval of a document, token/wallet deployment, financial activity or governance activation.
 
 **WisdomIntercessor / WisdomPact**
