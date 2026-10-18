@@ -55,6 +55,10 @@ See also:
 - `docs/review/WI-DR-001-Document-Architecture-Technical-Legal-Review-v1.0.md`
 - `docs/architecture/Site-Master-Structure-and-Page-Template-Specification.md`
 
+## Companion governance policy (draft)
+
+- [WI-GV-002 — سیاست عضویت، گنجینه حکمت و مشارکت ارزش‌محور](docs/governance/WI-GV-002-Membership-Treasury-and-Value-Participation-Policy-v0.1.md) — draft only; it does not amend or change the structure of the Wisdom Pact / Eternal Wisdom Charter. Legal and accounting review is required before operational use.
+
 ## Mission
 
 The project is organized around the principle of **آزادی حکمت برای همه** — freedom of wisdom for everyone.
