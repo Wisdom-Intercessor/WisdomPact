@@ -105,3 +105,19 @@ GitHub is used for controlled source and documentation.
 The public website is a separate publication surface. A GitHub commit does not by itself mean website publication, production deployment, approval of a document, token/wallet deployment, financial activity or governance activation.
 
 **WisdomIntercessor / WisdomPact**
+
+
+## Repository classification and architecture links
+- **Repository class:** Foundational charter and pact.
+- **Parent:** Wisdom Ecosystem, governed by [WisdomCore](https://github.com/Wisdom-Intercessor/WisdomCore).
+- **Purpose:** Normative principles, pact text, and foundational commitments; source authority must be preserved.
+- **Central registry:** [WI-GOV-REPO-001 — Repository Registry](https://github.com/Wisdom-Intercessor/WisdomCore/blob/main/docs/REPOSITORY-REGISTRY.md).
+- **Naming and lifecycle rules:** [WI-GOV-REPO-002](https://github.com/Wisdom-Intercessor/WisdomCore/blob/main/docs/REPOSITORY-NAMING-AND-GOVERNANCE.md).
+
+### Related repositories and shared interfaces
+- [WisdomCore](https://github.com/Wisdom-Intercessor/WisdomCore)
+- [Eternal-Wisdom-Foundation](https://github.com/Wisdom-Intercessor/Eternal-Wisdom-Foundation)
+- [Wisdom-Iran](https://github.com/Wisdom-Intercessor/Wisdom-Iran)
+- [WisdomGovernance](https://github.com/WisdomIntercessor/WisdomGovernance)
+
+Related repositories are architectural dependencies or sources, not subordinate repositories. Repository ownership and authority remain with their recorded owners.
