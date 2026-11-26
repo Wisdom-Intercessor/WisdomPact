@@ -26,7 +26,7 @@ def parse_registry_ids(markdown):
         if in_table and line.startswith("## "):
             break
         if in_table:
-            match = re.match(r"^\\|\\s*(R-[A-Z]+-[0-9]{3})\\s*\\|", line)
+            match = re.match(r"^\|\s*(R-[A-Z]+-[0-9]{3})\s*\|", line)
             if match:
                 ids.append(match.group(1))
     return set(ids), ids
