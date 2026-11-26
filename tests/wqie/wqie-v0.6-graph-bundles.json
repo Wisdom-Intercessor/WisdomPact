@@ -1,0 +1,292 @@
+{
+  "corpus_version": "0.6",
+  "note": "Synthetic graph bundles for validator tests only; not empirical findings.",
+  "bundles": [
+    {
+      "id": "GRAPH-VALID-001",
+      "expected_valid": true,
+      "expected_codes": [],
+      "bundle": {
+        "graph_id": "GRAPH-TEST-VALID",
+        "graph_version": "0.1",
+        "record_schema_version": "0.2",
+        "relation_registry_version": "0.2",
+        "generated_at": "2026-11-26T10:00:00Z",
+        "description": "Synthetic valid bundle.",
+        "records": [
+          {
+            "id": "N-ACTOR-001",
+            "record_type": "NODE",
+            "version": "0.2",
+            "status": "DRAFT",
+            "created_at": "2026-11-26T09:00:00Z",
+            "updated_at": "2026-11-26T09:00:00Z",
+            "provenance": {
+              "created_by_role": "test-author",
+              "method": "synthetic fixture"
+            },
+            "node_type": "CONTEXT",
+            "label": "Actor",
+            "definition": "Synthetic actor node."
+          },
+          {
+            "id": "N-RIGHT-001",
+            "record_type": "NODE",
+            "version": "0.2",
+            "status": "DRAFT",
+            "created_at": "2026-11-26T09:00:00Z",
+            "updated_at": "2026-11-26T09:00:00Z",
+            "provenance": {
+              "created_by_role": "test-author",
+              "method": "synthetic fixture"
+            },
+            "node_type": "RIGHT",
+            "label": "Right",
+            "definition": "Synthetic right node."
+          },
+          {
+            "id": "N-POLICY-001",
+            "record_type": "NODE",
+            "version": "0.2",
+            "status": "DRAFT",
+            "created_at": "2026-11-26T09:00:00Z",
+            "updated_at": "2026-11-26T09:00:00Z",
+            "provenance": {
+              "created_by_role": "test-author",
+              "method": "synthetic fixture"
+            },
+            "node_type": "PROPOSAL",
+            "label": "Proposal",
+            "definition": "Synthetic proposal node."
+          },
+          {
+            "id": "REL-TEST-001",
+            "record_type": "RELATION",
+            "version": "0.2",
+            "status": "PROPOSED",
+            "created_at": "2026-11-26T09:00:00Z",
+            "updated_at": "2026-11-26T09:30:00Z",
+            "provenance": {
+              "created_by_role": "test-author",
+              "method": "synthetic fixture"
+            },
+            "relation_type": "R-NOR-005",
+            "source_id": "N-POLICY-001",
+            "target_id": "N-RIGHT-001",
+            "statement": "Synthetic relation.",
+            "evidence": [
+              {
+                "ref": "EXT-SOURCE-1",
+                "class": "NORMATIVE-JUSTIFICATION"
+              }
+            ],
+            "uncertainty": {
+              "kind": [
+                "MISSING-EVIDENCE"
+              ],
+              "description": "Synthetic only."
+            }
+          },
+          {
+            "id": "HYP-TEST-001",
+            "record_type": "HYPEREDGE",
+            "version": "0.2",
+            "status": "DRAFT",
+            "created_at": "2026-11-26T09:00:00Z",
+            "updated_at": "2026-11-26T09:00:00Z",
+            "provenance": {
+              "created_by_role": "test-author",
+              "method": "synthetic fixture"
+            },
+            "hyperedge_type": "JOINT-CONTEXT",
+            "member_node_ids": [
+              "N-ACTOR-001",
+              "N-RIGHT-001",
+              "N-POLICY-001"
+            ],
+            "role_map": {
+              "N-ACTOR-001": "actor",
+              "N-RIGHT-001": "affected-right",
+              "N-POLICY-001": "proposal"
+            },
+            "joint_statement": "Synthetic joint configuration.",
+            "why_not_pairwise": "The joint configuration is the unit under test.",
+            "evidence": [
+              {
+                "ref": "EXT-MODEL-1",
+                "class": "THEORETICAL-MODEL"
+              }
+            ],
+            "uncertainty": {
+              "kind": [
+                "MODEL"
+              ],
+              "description": "Synthetic only."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "GRAPH-INVALID-001",
+      "expected_valid": false,
+      "expected_codes": [
+        "DUPLICATE_RECORD_ID",
+        "UNRESOLVED_RELATION_NODE",
+        "RELATION_TYPE_NOT_IN_REGISTRY"
+      ],
+      "bundle": {
+        "graph_id": "GRAPH-TEST-INVALID",
+        "graph_version": "0.1",
+        "record_schema_version": "0.2",
+        "relation_registry_version": "0.2",
+        "generated_at": "2026-11-26T10:00:00Z",
+        "records": [
+          {
+            "id": "N-ONE-001",
+            "record_type": "NODE",
+            "version": "0.2",
+            "status": "DRAFT",
+            "created_at": "2026-11-26T09:00:00Z",
+            "updated_at": "2026-11-26T09:00:00Z",
+            "provenance": {
+              "created_by_role": "test-author",
+              "method": "synthetic fixture"
+            },
+            "node_type": "CONTEXT",
+            "label": "One",
+            "definition": "Synthetic node."
+          },
+          {
+            "id": "N-ONE-001",
+            "record_type": "NODE",
+            "version": "0.2",
+            "status": "DRAFT",
+            "created_at": "2026-11-26T09:00:00Z",
+            "updated_at": "2026-11-26T09:00:00Z",
+            "provenance": {
+              "created_by_role": "test-author",
+              "method": "synthetic fixture"
+            },
+            "node_type": "CONTEXT",
+            "label": "Duplicate",
+            "definition": "Synthetic duplicate."
+          },
+          {
+            "id": "REL-BAD-001",
+            "record_type": "RELATION",
+            "version": "0.2",
+            "status": "PROPOSED",
+            "created_at": "2026-11-26T09:00:00Z",
+            "updated_at": "2026-11-26T09:00:00Z",
+            "provenance": {
+              "created_by_role": "test-author",
+              "method": "synthetic fixture"
+            },
+            "relation_type": "R-FAKE-999",
+            "source_id": "N-ONE-001",
+            "target_id": "N-MISSING-001",
+            "statement": "Synthetic invalid relation.",
+            "evidence": [
+              {
+                "ref": "EXT-1",
+                "class": "UNVERIFIED-ASSERTION"
+              }
+            ],
+            "uncertainty": {
+              "kind": [
+                "MISSING-EVIDENCE"
+              ],
+              "description": "Synthetic only."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "GRAPH-INVALID-HYPEREDGE-001",
+      "expected_valid": false,
+      "expected_codes": [
+        "DUPLICATE_HYPEREDGE_MEMBER",
+        "HYPEREDGE_TOO_FEW_MEMBERS",
+        "ROLE_MAP_REFERENCES_NON_MEMBER",
+        "UNRESOLVED_HYPEREDGE_MEMBER"
+      ],
+      "bundle": {
+        "graph_id": "GRAPH-TEST-HYPEREDGE-INVALID",
+        "graph_version": "0.1",
+        "record_schema_version": "0.2",
+        "relation_registry_version": "0.2",
+        "generated_at": "2026-11-26T10:00:00Z",
+        "records": [
+          {
+            "id": "N-A-001",
+            "record_type": "NODE",
+            "version": "0.2",
+            "status": "DRAFT",
+            "created_at": "2026-11-26T09:00:00Z",
+            "updated_at": "2026-11-26T09:00:00Z",
+            "provenance": {
+              "created_by_role": "test-author",
+              "method": "synthetic fixture"
+            },
+            "node_type": "CONTEXT",
+            "label": "A",
+            "definition": "Synthetic node."
+          },
+          {
+            "id": "N-B-001",
+            "record_type": "NODE",
+            "version": "0.2",
+            "status": "DRAFT",
+            "created_at": "2026-11-26T09:00:00Z",
+            "updated_at": "2026-11-26T09:00:00Z",
+            "provenance": {
+              "created_by_role": "test-author",
+              "method": "synthetic fixture"
+            },
+            "node_type": "CONTEXT",
+            "label": "B",
+            "definition": "Synthetic node."
+          },
+          {
+            "id": "HYP-BAD-001",
+            "record_type": "HYPEREDGE",
+            "version": "0.2",
+            "status": "DRAFT",
+            "created_at": "2026-11-26T09:00:00Z",
+            "updated_at": "2026-11-26T09:00:00Z",
+            "provenance": {
+              "created_by_role": "test-author",
+              "method": "synthetic fixture"
+            },
+            "hyperedge_type": "JOINT-CONTEXT",
+            "member_node_ids": [
+              "N-A-001",
+              "N-A-001",
+              "N-MISSING-001"
+            ],
+            "role_map": {
+              "N-A-001": "actor",
+              "N-B-001": "not-a-member"
+            },
+            "joint_statement": "Synthetic invalid joint configuration.",
+            "why_not_pairwise": "Synthetic test.",
+            "evidence": [
+              {
+                "ref": "EXT-2",
+                "class": "THEORETICAL-MODEL"
+              }
+            ],
+            "uncertainty": {
+              "kind": [
+                "MODEL"
+              ],
+              "description": "Synthetic only."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
