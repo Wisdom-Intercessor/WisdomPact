@@ -1,0 +1,99 @@
+{
+  "corpus_version": "0.1",
+  "note": "Synthetic catalog fixtures for offline schema tests only; not evidence and no URI is dereferenced.",
+  "fixtures": [
+    {
+      "id": "CATALOG-VALID-PUBLIC",
+      "expected_valid": true,
+      "entry": {
+        "source_id": "SRC-EXAMPLE-001",
+        "source_kind": "PUBLICATION",
+        "title": "Synthetic public report",
+        "identifiers": [
+          {
+            "namespace": "DOI",
+            "value": "10.0000/example.1"
+          }
+        ],
+        "canonical_uri": "https://example.org/report",
+        "publisher_or_issuer": "Example Institute",
+        "creators": [
+          "Synthetic Author"
+        ],
+        "published_at": "2026-01-01",
+        "language": "en",
+        "version_label": "1.0",
+        "access_class": "PUBLIC",
+        "resolution_status": "RESOLVED",
+        "recorded_at": "2026-11-26T08:00:00Z",
+        "last_checked_at": "2026-11-26T08:01:00Z",
+        "content_fingerprint": {
+          "algorithm": "SHA-256",
+          "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "representation": "raw downloaded bytes",
+          "media_type": "application/pdf"
+        },
+        "rights_note": "Synthetic test only."
+      }
+    },
+    {
+      "id": "CATALOG-VALID-NOT-CHECKED",
+      "expected_valid": true,
+      "entry": {
+        "source_id": "SRC-EXAMPLE-002",
+        "source_kind": "DATASET",
+        "title": "Synthetic restricted dataset",
+        "identifiers": [
+          {
+            "namespace": "REPOSITORY",
+            "value": "repo-object-42"
+          }
+        ],
+        "access_class": "RESTRICTED",
+        "resolution_status": "NOT-CHECKED",
+        "recorded_at": "2026-11-26T08:00:00Z"
+      }
+    },
+    {
+      "id": "CATALOG-INVALID-MISSING-CHECK-TIME",
+      "expected_valid": false,
+      "entry": {
+        "source_id": "SRC-EXAMPLE-003",
+        "source_kind": "WEB-PAGE",
+        "title": "Synthetic page",
+        "identifiers": [
+          {
+            "namespace": "URL",
+            "value": "https://example.org/page"
+          }
+        ],
+        "access_class": "PUBLIC",
+        "resolution_status": "UNAVAILABLE",
+        "recorded_at": "2026-11-26T08:00:00Z"
+      }
+    },
+    {
+      "id": "CATALOG-INVALID-BAD-DIGEST",
+      "expected_valid": false,
+      "entry": {
+        "source_id": "SRC-EXAMPLE-004",
+        "source_kind": "PUBLICATION",
+        "title": "Synthetic item",
+        "identifiers": [
+          {
+            "namespace": "ISBN",
+            "value": "0000000000"
+          }
+        ],
+        "access_class": "PUBLIC",
+        "resolution_status": "NOT-CHECKED",
+        "recorded_at": "2026-11-26T08:00:00Z",
+        "content_fingerprint": {
+          "algorithm": "SHA-256",
+          "digest": "not-a-hash",
+          "representation": "raw bytes"
+        }
+      }
+    }
+  ]
+}
