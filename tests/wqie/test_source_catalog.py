@@ -9,11 +9,20 @@ CORPUS = json.loads((ROOT / "tests/wqie/wqie-v0.1-source-catalog-fixtures.json")
 Draft202012Validator.check_schema(SCHEMA)
 VALIDATOR = Draft202012Validator(SCHEMA, format_checker=FormatChecker())
 
+def catalog_for(entry):
+    return {
+        "catalog_id": "CATALOG-SYNTHETIC-TEST",
+        "catalog_version": "0.1.0",
+        "contract_version": "0.1",
+        "generated_at": "2026-11-26T08:00:00Z",
+        "entries": [entry],
+    }
+
 class SourceCatalogSchemaTests(unittest.TestCase):
     def test_fixture_expectations(self):
         for fixture in CORPUS["fixtures"]:
             with self.subTest(fixture=fixture["id"]):
-                errors = list(VALIDATOR.iter_errors(fixture["entry"]))
+                errors = list(VALIDATOR.iter_errors(catalog_for(fixture["entry"])))
                 self.assertEqual(not errors, fixture["expected_valid"],
                     msg="; ".join(f"{e.json_path}: {e.message}" for e in errors))
 
