@@ -86,7 +86,7 @@ def validate_bundle(bundle):
                                        "Relation endpoint must resolve to a NODE in this bundle."))
         elif kind == "HYPEREDGE":
             members = record.get("member_node_ids", [])
-            if len(members) < 3:
+            if len(set(members)) < 3:
                 errors.append(diag("HYPEREDGE_TOO_FEW_MEMBERS", path + ".member_node_ids",
                                    "A Hyperedge requires at least three distinct NODE members."))
             if len(members) != len(set(members)):
