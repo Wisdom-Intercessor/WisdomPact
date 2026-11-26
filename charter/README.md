@@ -28,6 +28,10 @@ The former word **Global** is not part of the official title. Existing filenames
 
 Until the approved source text is imported and verified, `CHARTER.md` must not be treated as a completed or authoritative transcription.
 
+## Proposed participation annex
+
+`charter/annexes/ANNEX-Participation-Collective-Wisdom-and-Shared-Action.md` is a proposed annex describing participation rights and duties, attribution, deliberation, recognition, privacy, appeals and non-activation safeguards. It is not yet incorporated into the approved Charter text. Its companion system architecture is `docs/architecture/WI-CA-001-Charter-Centered-Collective-Wisdom-and-Action-Architecture.md`.
+
 ## Release policy
 
 Charter releases must preserve document identity, version, language alignment, and revision history. Superseded or legacy artifacts may be retained under `charter/releases/` for traceability.
