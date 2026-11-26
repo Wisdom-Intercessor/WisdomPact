@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wisdomintercessor.com/schemas/wqie-graph-bundle-v0.6.schema.json",
+  "title": "WQIE Graph Bundle v0.6",
+  "description": "Version-pinned envelope for a multi-record WQIE graph; cross-record semantics are enforced by the validator.",
+  "type": "object",
+  "required": [
+    "graph_id",
+    "graph_version",
+    "record_schema_version",
+    "relation_registry_version",
+    "generated_at",
+    "records"
+  ],
+  "properties": {
+    "graph_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "graph_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?$"
+    },
+    "record_schema_version": {
+      "const": "0.2"
+    },
+    "relation_registry_version": {
+      "const": "0.2"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "additionalProperties": false
+}
