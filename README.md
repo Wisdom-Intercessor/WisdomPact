@@ -61,20 +61,29 @@ The project is organized around the principle of **آزادی حکمت برای 
 
 ## Experience architecture
 
-The current public experience is organized around three principal spaces:
+The public website preserves the three-realm philosophy and the established **Wis / Dom / Land** page sequence, entered through **WisdomLand**.
 
-1. **عالم کبری / Cosmic Realm** — the living world-facing interface: cosmic scale, Earth, time, place, zoom and focus, with a path toward live spatial/temporal data.
-2. **دیوان حکمت / Wisdom Divan** — the governance and coordination center containing eight Wisdom Halls.
-3. **WisdomCore** — the participant operational center and interface to the ecosystem.
+- **WisdomLand — Gateway:** the unified entry portal, orientation point and access path to the Charter and all three realms. It is not a fourth realm.
+- **Wis — عالم درونی / Inner Realm:** the human being, identity, self-knowledge, cognition, wisdom, conscience, rights, responsibilities and personal agency.
+- **Dom — عالم پیونددهنده / Connecting Realm:** relationships, communities, knowledge exchange, networks, institutions, economy, governance, law, culture and digital/technical infrastructure.
+- **Land — عالم بیرونی / Outer Realm:** Earth, nature, living systems, environment, geography, resources, time, space and the wider cosmos.
 
-**WisdomSpace** is the participant's personal and interactive presence within WisdomCore and can become a public or selectively shared showcase.
+The three realms are interdependent: **Wis ↔ Dom ↔ Land**. The human being is the conscious participant; Dom mediates relationships and collective systems; Land is the outer world in which life and action take place.
 
-These experience spaces must not be confused with the three conceptual realms or with the Layer 0 + 8 logical architecture. The Site Master Structure specification defines the mapping.
+The **Eternal Wisdom Charter** guides reflection, decisions and responsible action across all three realms. It remains open to evidence, critique, pluralism and revision; it is not an instrument of coercion or a claim of infallibility.
+
+This conceptual/page model must remain distinct from:
+- **Layer 0 + 8:** the logical ecosystem architecture;
+- **WisdomCore:** the cross-ecosystem core and operational capabilities;
+- **WisdomSpace:** participant workspace and personal presence;
+- **Wisdom Tree and WQIE:** taxonomy and cross-domain relation analysis.
 
 See:
-- `docs/architecture/WI-MA-002-Final-Experience-and-Site-Architecture.md`
-- `docs/architecture/WI-UX-002-Three-Space-Experience-Architecture.md`
+- `docs/architecture/WI-UX-003-Wis-Dom-Land-Three-Realms-and-WisdomLand-Gateway.md`
 - `docs/architecture/Site-Master-Structure-and-Page-Template-Specification.md`
+- `docs/architecture/WI-MA-002-Final-Experience-and-Site-Architecture.md`
+
+The new WI-UX-003 document establishes the Wis/Dom/Land page model and supersedes earlier site-page mappings only where they conflict. It does not erase the prior experience architecture or logical layers.
 
 ## Ecosystem architecture
 
