@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wisdomintercessor.com/schemas/wqie-record-v0.2.schema.json",
+  "title": "WQIE Record v0.2",
+  "description": "Common envelope for Charter knowledge graph, pairwise relations and hyperedges. Draft schema; implementation must pin and validate a release.",
+  "oneOf": [
+    { "$ref": "#/$defs/node" },
+    { "$ref": "#/$defs/relation" },
+    { "$ref": "#/$defs/hyperedge" }
+  ],
+  "$defs": {
+    "common": {
+      "type": "object",
+      "required": ["id", "record_type", "version", "status", "created_at", "updated_at", "provenance"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[A-Z0-9][A-Z0-9._:-]{2,127}$" },
+        "record_type": { "enum": ["NODE", "RELATION", "HYPEREDGE"] },
+        "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?$" },
+        "status": { "enum": ["DRAFT", "PROPOSED", "EVIDENCE-REVIEW", "CONTESTED", "ACCEPTED-WORKING", "REJECTED", "EXPIRED", "SUPERSEDED", "WITHDRAWN"] },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" },
+        "valid_from": { "type": ["string", "null"], "format": "date-time" },
+        "valid_to": { "type": ["string", "null"], "format": "date-time" },
+        "review_due": { "type": ["string", "null"], "format": "date-time" },
+        "provenance": {
+          "type": "object",
+          "required": ["created_by_role", "method"],
+          "properties": {
+            "created_by_role": { "type": "string", "minLength": 1 },
+            "method": { "type": "string", "minLength": 1 },
+            "source_refs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+            "change_note": { "type": ["string", "null"] }
+          },
+          "additionalProperties": false
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "review_state": { "enum": ["NOT-REVIEWED", "IN-REVIEW", "REVIEWED", "REVIEW-REJECTED"] },
+            "reviewer_roles": { "type": "array", "items": { "type": "string" } },
+            "review_note": { "type": ["string", "null"] }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["ref", "class"],
+      "properties": {
+        "ref": { "type": "string", "minLength": 1 },
+        "class": { "enum": ["EMPIRICAL-OBSERVATION", "EXPERIMENTAL", "QUASI-EXPERIMENTAL", "CAUSAL-INFERENCE", "SYSTEMATIC-REVIEW", "THEORETICAL-MODEL", "LOGICAL-ARGUMENT", "PHILOSOPHICAL-ARGUMENT", "NORMATIVE-JUSTIFICATION", "LEGAL-AUTHORITY", "HISTORICAL-RECORD", "EXPERT-ELICITATION", "STAKEHOLDER-TESTIMONY", "UNVERIFIED-ASSERTION"] },
+        "scope": { "type": ["string", "null"] },
+        "limitations": { "type": "array", "items": { "type": "string" } },
+        "accessed_at": { "type": ["string", "null"], "format": "date-time" }
+      },
+      "additionalProperties": false
+    },
+    "uncertainty": {
+      "type": "object",
+      "properties": {
+        "kind": { "type": "array", "items": { "enum": ["MEASUREMENT", "SAMPLING", "MODEL", "CAUSAL", "INTERPRETIVE", "LEGAL", "TEMPORAL", "VALUE-DISAGREEMENT", "MISSING-EVIDENCE"] } },
+        "description": { "type": "string" },
+        "alternatives": { "type": "array", "items": { "type": "string" } },
+        "reduction_method": { "type": ["string", "null"] }
+      },
+      "required": ["kind"],
+      "additionalProperties": false
+    },
+    "node": {
+      "allOf": [
+        { "$ref": "#/$defs/common" },
+        {
+          "type": "object",
+          "required": ["record_type", "node_type", "label", "definition"],
+          "properties": {
+            "record_type": { "const": "NODE" },
+            "node_type": { "enum": ["ROOT-FOUNDATION", "CORE-CONCEPT", "SYSTEM-MECHANISM", "DOMAIN", "SUBDOMAIN", "CLAIM", "QUESTION", "SOURCE", "EVIDENCE", "RIGHT", "DUTY", "PROPOSAL", "CRITIQUE", "DECISION", "PRODUCT-SUPPORT-SYSTEM", "OUTCOME", "INDICATOR", "CONTEXT"] },
+            "label": { "type": "string", "minLength": 1 },
+            "definition": { "type": "string" },
+            "primary_tree_path": { "type": "array", "items": { "type": "string" } },
+            "domain_ids": { "type": "array", "items": { "type": "string", "pattern": "^D[0-9]{2}$" }, "uniqueItems": true },
+            "language": { "type": "string" },
+            "source_refs": { "type": "array", "items": { "type": "string" } },
+            "privacy_class": { "enum": ["PUBLIC", "INTERNAL", "RESTRICTED", "PERSONAL-DATA"] }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "relation": {
+      "allOf": [
+        { "$ref": "#/$defs/common" },
+        {
+          "type": "object",
+          "required": ["record_type", "relation_type", "source_id", "target_id", "statement", "evidence", "uncertainty"],
+          "properties": {
+            "record_type": { "const": "RELATION" },
+            "relation_type": { "type": "string", "pattern": "^R-[A-Z]+-[0-9]{3}$" },
+            "source_id": { "type": "string" },
+            "target_id": { "type": "string" },
+            "statement": { "type": "string", "minLength": 1 },
+            "conditions": { "type": "array", "items": { "type": "string" } },
+            "evidence": { "type": "array", "items": { "$ref": "#/$defs/evidence" } },
+            "evidence_quality": { "type": ["string", "null"] },
+            "confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+            "uncertainty": { "$ref": "#/$defs/uncertainty" },
+            "impact_dimensions": { "type": "array", "items": { "enum": ["HUMAN", "RIGHTS", "HEALTH", "SOCIAL", "GOVERNANCE", "ECONOMIC", "CULTURAL", "TECHNOLOGICAL", "SECURITY", "ECOLOGICAL", "INTERGENERATIONAL", "GLOBAL", "SPIRITUAL-EXISTENTIAL"] } },
+            "jurisdiction": { "type": ["string", "null"] },
+            "causal_method": { "type": ["string", "null"] }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "hyperedge": {
+      "allOf": [
+        { "$ref": "#/$defs/common" },
+        {
+          "type": "object",
+          "required": ["record_type", "hyperedge_type", "member_node_ids", "role_map", "joint_statement", "why_not_pairwise", "evidence", "uncertainty"],
+          "properties": {
+            "record_type": { "const": "HYPEREDGE" },
+            "hyperedge_type": { "type": "string", "minLength": 1 },
+            "member_node_ids": { "type": "array", "minItems": 3, "uniqueItems": true, "items": { "type": "string" } },
+            "role_map": { "type": "object", "additionalProperties": { "type": "string" } },
+            "joint_statement": { "type": "string", "minLength": 1 },
+            "why_not_pairwise": { "type": "string", "minLength": 1 },
+            "conditions": { "type": "array", "items": { "type": "string" } },
+            "evidence": { "type": "array", "items": { "$ref": "#/$defs/evidence" } },
+            "uncertainty": { "$ref": "#/$defs/uncertainty" }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    }
+  }
+}
