@@ -128,7 +128,7 @@
     {
       "id": "RELATION-INVALID-MISSING-UNCERTAINTY",
       "expected_schema_valid": false,
-      "expected_semantic_valid": false,
+      "expected_semantic_valid": true,
       "record": {
         "id": "REL-TEST-002",
         "record_type": "RELATION",
@@ -155,7 +155,7 @@
     {
       "id": "RELATION-INVALID-CONFIDENCE",
       "expected_schema_valid": false,
-      "expected_semantic_valid": false,
+      "expected_semantic_valid": true,
       "record": {
         "id": "REL-TEST-003",
         "record_type": "RELATION",
@@ -253,7 +253,10 @@
           ],
           "description": "Semantic validation fixture."
         }
-      }
+      },
+      "semantic_failure_codes": [
+        "RELATION_TYPE_NOT_IN_REGISTRY"
+      ]
     },
     {
       "id": "RELATION-SEMANTIC-INVALID-UNRESOLVED-ENDPOINT",
@@ -287,7 +290,10 @@
           ],
           "description": "Semantic validation fixture."
         }
-      }
+      },
+      "semantic_failure_codes": [
+        "UNRESOLVED_TARGET_NODE"
+      ]
     },
     {
       "id": "SUPPORT-N-POLICY-001",
@@ -414,6 +420,104 @@
         "definition": "Synthetic node included only to resolve graph references in the conformance corpus.",
         "privacy_class": "PUBLIC"
       }
+    },
+    {
+      "id": "HYPEREDGE-SEMANTIC-INVALID-ROLE-MAP",
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "record": {
+        "id": "HYP-TEST-003",
+        "record_type": "HYPEREDGE",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "synthetic fixture"
+        },
+        "hyperedge_type": "JOINT-CONTEXT-TEST",
+        "member_node_ids": [
+          "N-ACTOR-001",
+          "N-CONTEXT-001",
+          "N-OUTCOME-001"
+        ],
+        "role_map": {
+          "N-ACTOR-001": "actor",
+          "N-CONTEXT-001": "condition",
+          "N-OUTCOME-001": "outcome",
+          "N-NOT-A-MEMBER-001": "observer"
+        },
+        "joint_statement": "Negative fixture: role map includes a node outside the member list.",
+        "why_not_pairwise": "Pairwise links would not preserve that the outcome is asserted only for this combined configuration.",
+        "evidence": [
+          {
+            "ref": "TEST-MODEL-001",
+            "class": "THEORETICAL-MODEL",
+            "scope": "Synthetic test only",
+            "limitations": [
+              "No empirical claim"
+            ]
+          }
+        ],
+        "uncertainty": {
+          "kind": [
+            "MODEL"
+          ],
+          "description": "Illustrative structural uncertainty only."
+        }
+      },
+      "semantic_failure_codes": [
+        "ROLE_MAP_REFERENCES_NON_MEMBER"
+      ]
+    },
+    {
+      "id": "HYPEREDGE-INVALID-DUPLICATE-MEMBER",
+      "expected_schema_valid": false,
+      "expected_semantic_valid": false,
+      "record": {
+        "id": "HYP-TEST-004",
+        "record_type": "HYPEREDGE",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "synthetic fixture"
+        },
+        "hyperedge_type": "JOINT-CONTEXT-TEST",
+        "member_node_ids": [
+          "N-ACTOR-001",
+          "N-CONTEXT-001",
+          "N-CONTEXT-001"
+        ],
+        "role_map": {
+          "N-ACTOR-001": "actor",
+          "N-CONTEXT-001": "condition"
+        },
+        "joint_statement": "Negative fixture: duplicate member ID.",
+        "why_not_pairwise": "Pairwise links would not preserve that the outcome is asserted only for this combined configuration.",
+        "evidence": [
+          {
+            "ref": "TEST-MODEL-001",
+            "class": "THEORETICAL-MODEL",
+            "scope": "Synthetic test only",
+            "limitations": [
+              "No empirical claim"
+            ]
+          }
+        ],
+        "uncertainty": {
+          "kind": [
+            "MODEL"
+          ],
+          "description": "Illustrative structural uncertainty only."
+        }
+      },
+      "semantic_failure_codes": [
+        "DUPLICATE_HYPEREDGE_MEMBER"
+      ]
     }
   ]
 }
