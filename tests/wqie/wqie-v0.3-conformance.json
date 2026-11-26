@@ -1,0 +1,293 @@
+{
+  "corpus_version": "0.3",
+  "schema_under_test": "schemas/wqie-record-v0.2.schema.json",
+  "registry_under_test": "docs/standards/WQIE-relation-registry-v0.2.md",
+  "note": "Synthetic conformance fixtures only. expected_schema_valid and expected_semantic_valid are independent.",
+  "fixtures": [
+    {
+      "id": "NODE-VALID-001",
+      "expected_schema_valid": true,
+      "expected_semantic_valid": true,
+      "record": {
+        "id": "N-HUMAN-RIGHTS-001",
+        "record_type": "NODE",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "synthetic fixture"
+        },
+        "node_type": "RIGHT",
+        "label": "Illustrative right to explanation",
+        "definition": "A synthetic placeholder used only to test record structure.",
+        "primary_tree_path": [
+          "Core",
+          "Human Dignity",
+          "Rights"
+        ],
+        "domain_ids": [
+          "D05",
+          "D06"
+        ],
+        "language": "en",
+        "privacy_class": "PUBLIC"
+      }
+    },
+    {
+      "id": "RELATION-VALID-001",
+      "expected_schema_valid": true,
+      "expected_semantic_valid": true,
+      "record": {
+        "id": "REL-TEST-001",
+        "record_type": "RELATION",
+        "version": "0.2",
+        "status": "PROPOSED",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "synthetic fixture"
+        },
+        "relation_type": "R-NOR-005",
+        "source_id": "N-POLICY-001",
+        "target_id": "N-HUMAN-RIGHTS-001",
+        "statement": "Illustrative policy proposal has a potential effect on the specified right; assessment remains pending.",
+        "evidence": [
+          {
+            "ref": "TEST-SOURCE-001",
+            "class": "NORMATIVE-JUSTIFICATION",
+            "scope": "Synthetic test only",
+            "limitations": [
+              "Not an empirical finding"
+            ]
+          }
+        ],
+        "confidence": null,
+        "uncertainty": {
+          "kind": [
+            "MISSING-EVIDENCE",
+            "VALUE-DISAGREEMENT"
+          ],
+          "description": "No real-world assessment is represented."
+        },
+        "impact_dimensions": [
+          "RIGHTS",
+          "GOVERNANCE"
+        ],
+        "jurisdiction": null
+      }
+    },
+    {
+      "id": "HYPEREDGE-VALID-001",
+      "expected_schema_valid": true,
+      "expected_semantic_valid": true,
+      "record": {
+        "id": "HYP-TEST-001",
+        "record_type": "HYPEREDGE",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "synthetic fixture"
+        },
+        "hyperedge_type": "JOINT-CONTEXT-TEST",
+        "member_node_ids": [
+          "N-ACTOR-001",
+          "N-CONTEXT-001",
+          "N-OUTCOME-001"
+        ],
+        "role_map": {
+          "N-ACTOR-001": "actor",
+          "N-CONTEXT-001": "condition",
+          "N-OUTCOME-001": "outcome"
+        },
+        "joint_statement": "Synthetic example: the joint configuration of actor, condition, and outcome is the subject of the assertion.",
+        "why_not_pairwise": "Pairwise links would not preserve that the outcome is asserted only for this combined configuration.",
+        "evidence": [
+          {
+            "ref": "TEST-MODEL-001",
+            "class": "THEORETICAL-MODEL",
+            "scope": "Synthetic test only",
+            "limitations": [
+              "No empirical claim"
+            ]
+          }
+        ],
+        "uncertainty": {
+          "kind": [
+            "MODEL"
+          ],
+          "description": "Illustrative structural uncertainty only."
+        }
+      }
+    },
+    {
+      "id": "RELATION-INVALID-MISSING-UNCERTAINTY",
+      "expected_schema_valid": false,
+      "expected_semantic_valid": false,
+      "record": {
+        "id": "REL-TEST-002",
+        "record_type": "RELATION",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "negative fixture"
+        },
+        "relation_type": "R-EPI-001",
+        "source_id": "N-SOURCE-001",
+        "target_id": "N-CLAIM-001",
+        "statement": "Negative fixture missing the required uncertainty object.",
+        "evidence": [
+          {
+            "ref": "TEST-SOURCE-002",
+            "class": "UNVERIFIED-ASSERTION"
+          }
+        ]
+      }
+    },
+    {
+      "id": "RELATION-INVALID-CONFIDENCE",
+      "expected_schema_valid": false,
+      "expected_semantic_valid": false,
+      "record": {
+        "id": "REL-TEST-003",
+        "record_type": "RELATION",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "negative fixture"
+        },
+        "relation_type": "R-EPI-001",
+        "source_id": "N-SOURCE-001",
+        "target_id": "N-CLAIM-001",
+        "statement": "Negative fixture with confidence outside the permitted interval.",
+        "evidence": [
+          {
+            "ref": "TEST-SOURCE-003",
+            "class": "THEORETICAL-MODEL"
+          }
+        ],
+        "confidence": 1.2,
+        "uncertainty": {
+          "kind": [
+            "MODEL"
+          ],
+          "description": "Invalid confidence value test."
+        }
+      }
+    },
+    {
+      "id": "HYPEREDGE-INVALID-TOO-FEW-MEMBERS",
+      "expected_schema_valid": false,
+      "expected_semantic_valid": false,
+      "record": {
+        "id": "HYP-TEST-002",
+        "record_type": "HYPEREDGE",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "negative fixture"
+        },
+        "hyperedge_type": "INVALID-PAIR",
+        "member_node_ids": [
+          "N-ACTOR-001",
+          "N-OUTCOME-001"
+        ],
+        "role_map": {
+          "N-ACTOR-001": "actor",
+          "N-OUTCOME-001": "outcome"
+        },
+        "joint_statement": "Invalid: only two members.",
+        "why_not_pairwise": "This cannot justify a hyperedge with only two members.",
+        "evidence": [],
+        "uncertainty": {
+          "kind": [
+            "MODEL"
+          ],
+          "description": "Invalid membership test."
+        }
+      }
+    },
+    {
+      "id": "RELATION-SEMANTIC-INVALID-UNKNOWN-TYPE",
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "semantic_failure": "RELATION_TYPE_NOT_IN_REGISTRY",
+      "record": {
+        "id": "REL-TEST-004",
+        "record_type": "RELATION",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "semantic negative fixture"
+        },
+        "relation_type": "R-UNKNOWN-999",
+        "source_id": "N-SOURCE-001",
+        "target_id": "N-CLAIM-001",
+        "statement": "Schema permits the ID pattern, but the registry does not define this type.",
+        "evidence": [
+          {
+            "ref": "TEST-SOURCE-004",
+            "class": "THEORETICAL-MODEL"
+          }
+        ],
+        "uncertainty": {
+          "kind": [
+            "MISSING-EVIDENCE"
+          ],
+          "description": "Semantic validation fixture."
+        }
+      }
+    },
+    {
+      "id": "RELATION-SEMANTIC-INVALID-UNRESOLVED-ENDPOINT",
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "semantic_failure": "UNRESOLVED_TARGET_NODE",
+      "record": {
+        "id": "REL-TEST-005",
+        "record_type": "RELATION",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "semantic negative fixture"
+        },
+        "relation_type": "R-EPI-001",
+        "source_id": "N-SOURCE-001",
+        "target_id": "N-NONEXISTENT-999",
+        "statement": "Schema accepts endpoint strings; graph integrity must reject the unresolved target.",
+        "evidence": [
+          {
+            "ref": "TEST-SOURCE-005",
+            "class": "THEORETICAL-MODEL"
+          }
+        ],
+        "uncertainty": {
+          "kind": [
+            "MISSING-EVIDENCE"
+          ],
+          "description": "Semantic validation fixture."
+        }
+      }
+    }
+  ]
+}
