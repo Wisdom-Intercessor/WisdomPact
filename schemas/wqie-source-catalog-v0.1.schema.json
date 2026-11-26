@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wisdomintercessor.com/schemas/wqie-source-catalog-v0.1.schema.json",
+  "title": "WQIE Source Catalog v0.1",
+  "type": "object",
+  "required": [
+    "catalog_id",
+    "catalog_version",
+    "contract_version",
+    "generated_at",
+    "entries"
+  ],
+  "properties": {
+    "catalog_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "catalog_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\\\.[0-9]+(\\\\.[0-9]+)?$"
+    },
+    "contract_version": {
+      "const": "0.1"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "identifier": {
+      "type": "object",
+      "required": [
+        "namespace",
+        "value"
+      ],
+      "properties": {
+        "namespace": {
+          "enum": [
+            "DOI",
+            "ISBN",
+            "ARXIV",
+            "URL",
+            "REPOSITORY",
+            "LEGAL-ID",
+            "PUBLISHER-ID",
+            "OTHER"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "fingerprint": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "digest",
+        "representation"
+      ],
+      "properties": {
+        "algorithm": {
+          "const": "SHA-256"
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "representation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "media_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "entry": {
+      "type": "object",
+      "required": [
+        "source_id",
+        "source_kind",
+        "title",
+        "identifiers",
+        "access_class",
+        "resolution_status",
+        "recorded_at"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "pattern": "^SRC-[A-Z0-9][A-Z0-9._:-]{2,120}$"
+        },
+        "source_kind": {
+          "enum": [
+            "PUBLICATION",
+            "DATASET",
+            "LEGAL-INSTRUMENT",
+            "STANDARD",
+            "REPOSITORY-OBJECT",
+            "WEB-PAGE",
+            "ARCHIVAL-RECORD",
+            "OTHER"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "identifiers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/identifier"
+          }
+        },
+        "canonical_uri": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "publisher_or_issuer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "creators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "published_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "language": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version_label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "access_class": {
+          "enum": [
+            "PUBLIC",
+            "INTERNAL",
+            "RESTRICTED",
+            "PERSONAL-DATA"
+          ]
+        },
+        "resolution_status": {
+          "enum": [
+            "NOT-CHECKED",
+            "RESOLVED",
+            "NOT-FOUND",
+            "AMBIGUOUS",
+            "UNAVAILABLE",
+            "RESTRICTED",
+            "DEPRECATED"
+          ]
+        },
+        "recorded_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "last_checked_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "content_fingerprint": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/fingerprint"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rights_note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "replacement_source_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^SRC-[A-Z0-9][A-Z0-9._:-]{2,120}$"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "resolution_status": {
+                "enum": [
+                  "RESOLVED",
+                  "NOT-FOUND",
+                  "AMBIGUOUS",
+                  "UNAVAILABLE",
+                  "RESTRICTED",
+                  "DEPRECATED"
+                ]
+              }
+            },
+            "required": [
+              "resolution_status"
+            ]
+          },
+          "then": {
+            "required": [
+              "last_checked_at"
+            ],
+            "properties": {
+              "last_checked_at": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    }
+  }
+}
