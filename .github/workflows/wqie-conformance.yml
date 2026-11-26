@@ -29,6 +29,7 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: requirements-wqie.txt
       - name: Install pinned validator
         run: python -m pip install -r requirements-wqie.txt
       - name: Run schema and semantic conformance tests
