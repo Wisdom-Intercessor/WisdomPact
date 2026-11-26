@@ -288,6 +288,132 @@
           "description": "Semantic validation fixture."
         }
       }
+    },
+    {
+      "id": "SUPPORT-N-POLICY-001",
+      "expected_schema_valid": true,
+      "expected_semantic_valid": true,
+      "record": {
+        "id": "N-POLICY-001",
+        "record_type": "NODE",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "synthetic graph support fixture"
+        },
+        "node_type": "CONTEXT",
+        "label": "Synthetic support node N-POLICY-001",
+        "definition": "Synthetic node included only to resolve graph references in the conformance corpus.",
+        "privacy_class": "PUBLIC"
+      }
+    },
+    {
+      "id": "SUPPORT-N-ACTOR-001",
+      "expected_schema_valid": true,
+      "expected_semantic_valid": true,
+      "record": {
+        "id": "N-ACTOR-001",
+        "record_type": "NODE",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "synthetic graph support fixture"
+        },
+        "node_type": "CONTEXT",
+        "label": "Synthetic support node N-ACTOR-001",
+        "definition": "Synthetic node included only to resolve graph references in the conformance corpus.",
+        "privacy_class": "PUBLIC"
+      }
+    },
+    {
+      "id": "SUPPORT-N-CONTEXT-001",
+      "expected_schema_valid": true,
+      "expected_semantic_valid": true,
+      "record": {
+        "id": "N-CONTEXT-001",
+        "record_type": "NODE",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "synthetic graph support fixture"
+        },
+        "node_type": "CONTEXT",
+        "label": "Synthetic support node N-CONTEXT-001",
+        "definition": "Synthetic node included only to resolve graph references in the conformance corpus.",
+        "privacy_class": "PUBLIC"
+      }
+    },
+    {
+      "id": "SUPPORT-N-OUTCOME-001",
+      "expected_schema_valid": true,
+      "expected_semantic_valid": true,
+      "record": {
+        "id": "N-OUTCOME-001",
+        "record_type": "NODE",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "synthetic graph support fixture"
+        },
+        "node_type": "CONTEXT",
+        "label": "Synthetic support node N-OUTCOME-001",
+        "definition": "Synthetic node included only to resolve graph references in the conformance corpus.",
+        "privacy_class": "PUBLIC"
+      }
+    },
+    {
+      "id": "SUPPORT-N-SOURCE-001",
+      "expected_schema_valid": true,
+      "expected_semantic_valid": true,
+      "record": {
+        "id": "N-SOURCE-001",
+        "record_type": "NODE",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "synthetic graph support fixture"
+        },
+        "node_type": "CONTEXT",
+        "label": "Synthetic support node N-SOURCE-001",
+        "definition": "Synthetic node included only to resolve graph references in the conformance corpus.",
+        "privacy_class": "PUBLIC"
+      }
+    },
+    {
+      "id": "SUPPORT-N-CLAIM-001",
+      "expected_schema_valid": true,
+      "expected_semantic_valid": true,
+      "record": {
+        "id": "N-CLAIM-001",
+        "record_type": "NODE",
+        "version": "0.2",
+        "status": "DRAFT",
+        "created_at": "2026-11-26T10:00:00Z",
+        "updated_at": "2026-11-26T10:00:00Z",
+        "provenance": {
+          "created_by_role": "test-author",
+          "method": "synthetic graph support fixture"
+        },
+        "node_type": "CONTEXT",
+        "label": "Synthetic support node N-CLAIM-001",
+        "definition": "Synthetic node included only to resolve graph references in the conformance corpus.",
+        "privacy_class": "PUBLIC"
+      }
     }
   ]
 }
