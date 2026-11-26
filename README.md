@@ -85,6 +85,15 @@ See:
 
 The new WI-UX-003 document establishes the Wis/Dom/Land page model and supersedes earlier site-page mappings only where they conflict. It does not erase the prior experience architecture or logical layers.
 
+## Charter-centered participation architecture
+
+The Charter is intended to guide an interactive environment for collective wisdom and responsible action. The proposed operational model connects participant identity, knowledge creation, research, criticism, collaboration, deliberation, practical projects and transparent recognition while preserving the Charter's rights and safeguards.
+
+- `docs/architecture/WI-CA-001-Charter-Centered-Collective-Wisdom-and-Action-Architecture.md` — proposed system-wide architecture.
+- `charter/annexes/ANNEX-Participation-Collective-Wisdom-and-Shared-Action.md` — proposed Charter annex for participation, collective decisions, attribution, privacy and rewards.
+
+These documents are proposals for review. They do not amend the approved Charter or activate financial, token, voting or production systems.
+
 ## Ecosystem architecture
 
 The logical architecture remains Layer 0 plus eight principal layers:
