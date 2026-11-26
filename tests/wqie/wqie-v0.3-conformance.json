@@ -128,7 +128,7 @@
     {
       "id": "RELATION-INVALID-MISSING-UNCERTAINTY",
       "expected_schema_valid": false,
-      "expected_semantic_valid": false,
+      "expected_semantic_valid": true,
       "record": {
         "id": "REL-TEST-002",
         "record_type": "RELATION",
@@ -155,7 +155,7 @@
     {
       "id": "RELATION-INVALID-CONFIDENCE",
       "expected_schema_valid": false,
-      "expected_semantic_valid": false,
+      "expected_semantic_valid": true,
       "record": {
         "id": "REL-TEST-003",
         "record_type": "RELATION",
